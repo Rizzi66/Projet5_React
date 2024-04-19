@@ -1,0 +1,14 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    height: 159px;
+    padding-top: 50px;
+    & img{
+        height: 40px;
+    }
+    &__copyright {
+        color: #FFF;
+    }
+}
