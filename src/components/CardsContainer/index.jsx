@@ -6,7 +6,7 @@ function CardsContainer() {
   return (
     <section className="cardscontainer">
       {CardsData.map((card) => (
-        <Card key={card.id} title={card.title} picture={card.cover} />
+        <Card key={card.id} id={card.id} title={card.title} picture={card.cover} />
       ))}
     </section>
   )

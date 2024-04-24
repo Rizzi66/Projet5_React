@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+
+.dropdown {
+    padding-bottom: 30px;
+    max-width: 1023px;
+    &__menu {
+        background-color: $main-color;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px 10px 15px;
+        border-radius: 5px;
+        .dropdown__title {
+            font-size: $font-size-24;
+            font-weight: $font-weight-bold;
+            color: $text-light-color;
+            margin: 0;
+        }
+        .dropdown__button {
+            background-color: $main-color;
+            height: 32px;
+            width: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__text {
+        background-color: darken($background-color, 3.5%);
+        margin: 0;
+        padding: 20px;
+        font-size: $font-size-18;
+        font-weight: $font-weight-light;
+        border-radius: 0 0 5px 5px;
+        & p {
+            margin: 0;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 .cardscontainer {
-    background-color: #F6F6F6;
+    background-color: darken($background-color, 3.5%);
     margin-bottom: 50px;
     border-radius: 25px;
     display: grid;

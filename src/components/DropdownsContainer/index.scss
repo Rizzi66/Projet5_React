@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.dropdownsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__location {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        & > div {
+            width: 46.936%;
+        }
+    }
+}
