@@ -1,10 +1,12 @@
+@import '../../variables.scss';
+
 .cardscontainer {
     background-color: #F6F6F6;
-    margin: 0 100px 50px;
+    margin-bottom: 50px;
     border-radius: 25px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 60px;
+    grid-column-gap: 5.264%;
     grid-row-gap: 50px;
     padding: 56px 50px 43px;
 

@@ -1,14 +1,30 @@
+@import '../../variables.scss';
+
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000;
-    height: 159px;
-    padding-top: 50px;
-    & img{
-        height: 40px;
-    }
-    &__copyright {
-        color: #FFF;
+    display: table-row;
+    height: 209px;
+    background-color: $footer-background-color;
+
+    
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .footer__logo {
+            height: 40px;
+            padding-top: 66px;
+        }
+        
+        .footer__copyright {
+            color: $text-light-color;
+            font-size: $font-size-24;
+            font-weight: 400;
+            margin: 0;
+            padding-bottom: 29px;
+        }
     }
 }

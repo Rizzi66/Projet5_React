@@ -1,14 +1,16 @@
+@import '../../variables.scss';
+
 .header {
     display: flex;
     justify-content: space-between;    
     align-items: center;
-    margin: 45px 100px;
-    max-width: 1440px;
+    margin: 45px 0 50px;
     & img {
         height: 68px;
     }
     &__link {
-        color: #000;
+        color: $text-dark-color;
+        font-size: $font-size-24;
         margin-left: 60px;
     }
 }

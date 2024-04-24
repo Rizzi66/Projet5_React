@@ -5,7 +5,7 @@ import './index.scss'
 function Home() {
   return (
     <main className="main">
-      <Banner />
+      <Banner bannerText="Chez vous, partout et ailleurs" bannerImage={1}/>
       <CardsContainer />
     </main>
   )

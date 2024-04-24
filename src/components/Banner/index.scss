@@ -1,12 +1,28 @@
+@import '../../variables.scss';
+
 .banner {
     height: 223px;
+    width: 100%;
     background-color: #000;
-    & img {
+    border-radius: 25px;
+    margin: 5px 0 43px;
+    position: relative;
+    &__background {
         width: 100%;
-        object-fit: contain;
-        border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+        opacity: 40%;
     }
     &__title {
-
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        color: $text-light-color;
+        font-size: $font-size-48;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        white-space: nowrap;
     }
 }

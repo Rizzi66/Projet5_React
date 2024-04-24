@@ -1,11 +1,13 @@
 import './index.scss'
-import background from '../../assets/background.png'
+import bannerImage_1 from '../../assets/bannerImage_1.jpg'
+import bannerImage_2 from '../../assets/bannerImage_2.jpg'
 
-function Banner() {
+
+function Banner( {bannerText , bannerImage} ) {
   return (
     <div className="banner">
-      <img src={background} alt="" />
-      <h2 className="banner__title">Chez vous, partout et ailleurs</h2>
+      <img className='banner__background' src={bannerImage === 1 ? bannerImage_1 : bannerImage_2} alt="" />
+      <h2 className="banner__title">{bannerText}</h2>
     </div>
   )
 }
