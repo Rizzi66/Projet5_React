@@ -17,7 +17,7 @@ function Dropdown({ title, description }) {
           <div className="dropdown__text">
             {description.map((element, index) => {
               return (
-                <p key={index}>{element}</p>
+                <p key={`${element}-${index}`}>{element}</p>
               )
             })}
           </div>

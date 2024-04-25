@@ -6,7 +6,7 @@ function DropdownsContainer( {type, current} ) {
   
   let descriptionValue = ''
   let equipmentsValue = ''
-  if (type === 'location') {
+  if (type === 'accommodation') {
       const currentArray = Object.entries(current);
       const currentFilter = currentArray.filter(([key, value]) => (key === "description") || (key === "equipments"))
      
@@ -22,7 +22,7 @@ function DropdownsContainer( {type, current} ) {
           <Dropdown key={drop.id} title={drop.title} description={drop.description} />
         ))
       :
-        <div className='dropdownsContainer__location'>
+        <div className='dropdownsContainer__accommodation'>
           <Dropdown title="Description" description={descriptionValue} />
           <Dropdown title="Équipements" description={equipmentsValue} />
         </div>
