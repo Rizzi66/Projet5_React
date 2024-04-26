@@ -1,8 +1,17 @@
 @import '../../variables.scss';
+@mixin absolute {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 56px;
+    bottom: 0px;
+}
 
 .dropdown {
     padding-bottom: 30px;
     max-width: 1023px;
+   // overflow: hidden;
+   // position: relative;
     &__menu {
         background-color: $main-color;
         display: flex;
@@ -25,12 +34,14 @@
         }
     }
     &__text {
+     //   @include absolute();
         background-color: darken($background-color, 3.5%);
         margin: 0;
         padding: 20px;
         font-size: $font-size-18;
         font-weight: $font-weight-light;
         border-radius: 0 0 5px 5px;
+        height: calc(100% - 56px - 40px);
         & p {
             margin: 0;
         }

@@ -13,4 +13,7 @@
         font-size: $font-size-24;
         margin-left: 60px;
     }
+    &__nav a.active {
+        text-decoration: underline;
+    }
 }

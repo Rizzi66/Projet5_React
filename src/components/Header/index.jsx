@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Logo from '../../assets/kasa.svg'
 import './index.scss'
 
@@ -6,15 +6,15 @@ function Header() {
   return (
     <header className="header">
       <Link to="/">
-        <img src={Logo} />
+        <img className='header__logo' src={Logo} />
       </Link>
       <nav className="header__nav">
-        <Link to="/" className="header__link">
+        <NavLink to="/" className="header__link">
           Accueil
-        </Link>
-        <Link to="/about" className="header__link">
+        </NavLink>
+        <NavLink to="/about" className="header__link">
           A Propos
-        </Link>
+        </NavLink>
       </nav>
     </header>
   )
