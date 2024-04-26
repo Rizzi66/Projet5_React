@@ -7,8 +7,10 @@
     bottom: 0px;
 }
 
+$padding-content: 20px;
+
 .dropdown {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     max-width: 1023px;
    // overflow: hidden;
    // position: relative;
@@ -33,15 +35,14 @@
             align-items: center;
         }
     }
-    &__text {
-     //   @include absolute();
+    &__content {
         background-color: darken($background-color, 3.5%);
         margin: 0;
-        padding: 20px;
+        padding: $padding-content;
         font-size: $font-size-18;
         font-weight: $font-weight-light;
         border-radius: 0 0 5px 5px;
-        height: calc(100% - 56px - 40px);
+        height: calc(100% - 56px - calc($padding-content*2));
         & p {
             margin: 0;
         }

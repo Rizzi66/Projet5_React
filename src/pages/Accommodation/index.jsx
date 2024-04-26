@@ -1,4 +1,4 @@
-import DropdownsContainer from '../../components/DropdownsContainer'
+import Dropdown from '../../components/Dropdown'
 import { useParams } from 'react-router-dom'
 import CardsData from '../../datas/annonces.json'
 import './index.scss'
@@ -12,6 +12,12 @@ function Accommodation() {
 
     const { idAccommodation } = useParams();
     const current = CardsData.filter((card) => (card.id === idAccommodation))[0]
+    const currentArray = Object.entries(current);
+
+    const currentFilter = currentArray.filter(([key, value]) => (key === "description") || (key === "equipments"))
+    const descriptionValue = (currentFilter[0])[1]
+    const equipmentsValue = (currentFilter[1])[1]
+
 
     return (
         <main className="accom">
@@ -25,7 +31,10 @@ function Accommodation() {
                 <Tag current={current} />
                 <Rate current={current} />
             </div>
-            <DropdownsContainer type='accommodation' current={current} />
+            <div className='accom__dropdown'>
+                <Dropdown title="Description" description={descriptionValue} />
+                <Dropdown title="Équipements" description={equipmentsValue} />
+            </div>
         </main>
     )
 }

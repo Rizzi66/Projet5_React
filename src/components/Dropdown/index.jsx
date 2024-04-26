@@ -8,22 +8,21 @@ function Dropdown({ title, description }) {
       <div className='dropdown'>
         <div className='dropdown__menu'>
             <h2 className='dropdown__title'>{title}</h2>
-            <button className='dropdown__button'>
+            <button className='dropdown__button' /*onClick={handleClick}*/ >
               <img src={Arrow} />
             </button>
         </div>
-        {Array.isArray(description) 
-        ?
-          <div className="dropdown__text">
+        {Array.isArray(description) ? (
+          <div className="dropdown__content">
             {description.map((element, index) => {
               return (
                 <p key={`${element}-${index}`}>{element}</p>
               )
             })}
           </div>
-        :
-          <p className="dropdown__text">{description}</p>
-        }
+        ) : (
+          <p className="dropdown__content">{description}</p>
+        )}
       </div>
     )
   }

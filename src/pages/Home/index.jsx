@@ -1,12 +1,17 @@
 import Banner from '../../components/Banner'
-import CardsContainer from '../../components/CardsContainer'
+import Card from '../../components/Card'
+import CardsData from '../../datas/annonces.json'
 import './index.scss'
 
 function Home() {
   return (
-    <main className="main">
+    <main>
       <Banner bannerText="Chez vous, partout et ailleurs" bannerImage={1}/>
-      <CardsContainer />
+      <section className="cardsContainer">
+        {CardsData.map((card) => (
+          <Card key={card.id} id={card.id} title={card.title} picture={card.cover} />
+        ))}
+      </section>
     </main>
   )
 }

@@ -1,2 +1,19 @@
 @import '../../variables.scss';
 
+.cardsContainer {
+    background-color: darken($background-color, 3.5%);
+    margin-bottom: 50px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5.264%;
+    grid-row-gap: 50px;
+    padding: 56px 50px 43px;
+    @media all and (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
+
+    }
+    @media all and (max-width: 599px) {
+        grid-template-columns: 1fr;
+    }
+}
