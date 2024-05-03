@@ -8,7 +8,7 @@
 .size-container > * {
   margin-inline: 6.945%;
   @media all and (max-width: 1024px) {
-    margin-inline: 4.572%;
+    margin-inline: 5.334%;
   }
 }
 
@@ -35,11 +35,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #000;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #000;
 }
 
 * {
@@ -49,6 +49,8 @@ a:hover {
 body {
   min-width: 320px;
   min-height: 100vh;
+  background-color: #FFF;
+  color: #000;
 }
 
 h1 {

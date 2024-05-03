@@ -5,8 +5,12 @@
     justify-content: space-between;    
     align-items: center;
     margin: 45px 0 50px;
-    & img {
-        height: 68px;
+    height: 68px;
+    & a {
+        height: 100%;
+    }
+    &__logo {
+        height: 100%;
     }
     &__link {
         color: $text-dark-color;
@@ -15,5 +19,17 @@
     }
     &__nav a.active {
         text-decoration: underline;
+    }
+    @media all and (max-width: 599px) {
+        margin: 20px 0 27px;
+        height: 47px;
+        &__link {
+            text-transform: uppercase;
+            font-size: $font-size-12;
+            margin-left: 26px;
+        }
+    }
+    @media all and (max-width: 359px) {
+        height: 30px;
     }
 }

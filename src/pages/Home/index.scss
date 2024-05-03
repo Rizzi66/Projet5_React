@@ -8,12 +8,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 5.264%;
     grid-row-gap: 50px;
-    padding: 56px 50px 43px;
+    padding: 4.517% 4.033% 3.468%;
     @media all and (max-width: 1024px) {
         grid-template-columns: 1fr 1fr;
-
+        grid-row-gap: 37px;
     }
     @media all and (max-width: 599px) {
         grid-template-columns: 1fr;
+        padding: 0;
+        background-color: $background-color;
+        grid-row-gap: 20px;
+        margin-bottom: 27px;
     }
 }
