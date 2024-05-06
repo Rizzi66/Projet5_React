@@ -1,1 +1,65 @@
 @import '../../variables.scss';
+
+.carrousel {
+    height: 415px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+
+    &__arrow {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba($color: #000000, $alpha: 0);
+        padding: 0;
+        margin: 0 23px;
+        &--right {
+            right: 0;
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    &__numbering {
+        position: absolute;
+        z-index: 3;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: $font-size-18;
+        font-weight: $font-weight-normal;
+        color: $text-light-color;
+        
+    }
+    &__pictures {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        & > img {
+            display: none;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .prev {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            transition: transform 1000ms;
+            transform: translateX(-100%);
+        }
+        .active {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            transition: transform 1000ms;
+            transform: translateX(0);
+        }
+        .next {
+            position: absolute;
+            z-index: 1;
+            display: block;
+            transition: transform 1000ms;
+            transform: translateX(100%);
+        }
+    }
+}
