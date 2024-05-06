@@ -23,8 +23,12 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        & > div {
+        .dropdown {
             width: 46.936%;
+            .dropdown__title {
+                font-size: $font-size-18;
+
+            }
         }
     }
 }
