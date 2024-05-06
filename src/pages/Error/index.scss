@@ -16,6 +16,7 @@
         font-weight: $font-weight-normal;
         margin-top: 0;
         margin-bottom: 100px;
+        text-align: center;
     }
     &__link {
         color: $text-dark-color;
@@ -23,6 +24,31 @@
         font-weight: $font-weight-normal;
         text-decoration-line: underline;
         margin-bottom: 100px;
-
+    }
+    @media all and (max-width: 1024px) {
+        &__404 {
+            font-size: $font-size-144;
+        }
+        &__text {
+            font-size: $font-size-22;
+            margin-bottom: 60px;
+        }
+        &__link {
+            font-size: $font-size-16;
+        }
+    }
+    @media all and (max-width: 599px) {
+        &__404 {
+            font-size: $font-size-96;
+            margin-top: 20px
+        }
+        &__text {
+            font-size: $font-size-18;
+            margin-bottom: 50px;
+        }
+        &__link {
+            font-size: $font-size-14;
+            margin-bottom: 80px;
+        }
     }
 }
