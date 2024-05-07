@@ -27,7 +27,7 @@ function Accommodation() {
             <main className="accom">
                 <Carrousel  current={current} />
                 <div className='accom__grid'>
-                    <div>
+                    <div className='accom__text'>
                         <h2 className='accom__title'>{current.title}</h2>
                         <p className='accom__loc'>{current.location}</p>
                     </div>

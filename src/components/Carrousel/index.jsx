@@ -4,6 +4,8 @@ import Arrow from '../../assets/arrow_carrousel.svg'
 
 function Carrousel({ current }) {
   const [currentPicture, setCurrentPicture] = useState(1)
+  const prevPicture = (currentPicture === 1 ? current.pictures.length : currentPicture - 1)
+  const nextPicture = (currentPicture === current.pictures.length ? 1 : currentPicture + 1)
 
   function leftPicture() {
     (currentPicture === 1) ? setCurrentPicture(current.pictures.length) : setCurrentPicture(currentPicture - 1)
@@ -32,8 +34,8 @@ function Carrousel({ current }) {
           <img 
             className=
               {currentPicture === (index + 1) ? 'active' : 
-                ((currentPicture === 1 ? current.pictures.length : currentPicture - 1) === (index + 1)) ? 'prev' :
-                  ((currentPicture === current.pictures.length ? 1 : currentPicture + 1) === (index + 1)) ? 'next' : ''} 
+                (prevPicture === (index + 1)) ? 'prev' :
+                  (nextPicture === (index + 1)) ? 'next' : ''} 
             key={`${picture}-${index}`} 
             src={picture} 
             alt={`Photo ${index+1} du logement "${current.title}"`} 
