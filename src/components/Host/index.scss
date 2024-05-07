@@ -11,8 +11,7 @@
         color: $main-color;
         margin: 0;
         text-align: end;
-        width: 200px;
-        word-spacing: 200px;
+        word-spacing: 400px;
     }
     &__pict {
         height: 64px;
@@ -20,4 +19,14 @@
         border-radius: 32px;
         margin-left: 10px;
     }
+    @media all and (max-width: 599px) {
+        height: 32px;
+        &__name {
+            font-size: $font-size-12;
+        }  
+        &__pict {
+            height: 32px;
+            width: 32px;
+        }
+      }
 }

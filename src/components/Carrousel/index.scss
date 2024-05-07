@@ -5,10 +5,9 @@
     position: relative;
     overflow: hidden;
     border-radius: 25px;
-
     &__arrow {
         position: absolute;
-        z-index: 3;
+        z-index: 2;
         top: 50%;
         transform: translateY(-50%);
         background-color: rgba($color: #000000, $alpha: 0);
@@ -21,7 +20,7 @@
     }
     &__numbering {
         position: absolute;
-        z-index: 3;
+        z-index: 2;
         bottom: 25px;
         left: 50%;
         transform: translateX(-50%);
@@ -32,8 +31,6 @@
     }
     &__pictures {
         display: flex;
-        height: 100%;
-        width: 100%;
         & > img {
             display: none;
             height: 100%;
@@ -44,22 +41,37 @@
             position: absolute;
             z-index: 1;
             display: block;
-            transition: transform 1000ms;
+            transition: transform 700ms;
             transform: translateX(-100%);
         }
         .active {
             position: absolute;
-            z-index: 2;
+            z-index: 1;
             display: block;
-            transition: transform 1000ms;
+            transition: transform 700ms;
             transform: translateX(0);
         }
         .next {
             position: absolute;
             z-index: 1;
             display: block;
-            transition: transform 1000ms;
+            transition: transform 700ms;
             transform: translateX(100%);
         }
     }
+    @media all and (max-width: 599px) {
+        height: 255px;
+        border-radius: 10px;
+        &__arrow {
+            margin: 0;
+            & > img {
+                height: 20px;
+                padding: 100% 6px;
+
+            }
+        }  
+        &__numbering {
+            display: none;
+        }
+      }
 }

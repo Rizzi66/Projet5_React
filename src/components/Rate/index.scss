@@ -4,14 +4,17 @@
     display: flex;
     justify-content: end;
     height: 24px;
-    position: relative;
-    bottom: 12px;
     &__star {
        margin: 0 8px;
        &--color {
             filter: $filter-main-color; 
        }
- 
     }
+    @media all and (max-width: 599px) {
+        height: 13px;
+        &__star {
+            margin: 0 3.25px;
+        }  
+      }
     
 }
