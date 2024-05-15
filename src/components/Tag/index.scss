@@ -1,31 +1,22 @@
-@import '../../variables.scss';
+@import '../../styles/variables.scss';
 
-.tags {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    &__tag {
-        display: block;
-        font-size: $font-size-14;
-        font-weight: $font-weight-bold;
-        color: $text-light-color;
-        margin: 0;
-        min-width: 99px;
-        background-color: $main-color;
-        border-radius: 10px;
-        margin-right: 10px;
-        margin-bottom: 6.5px;
-        text-align: center;
-        padding: 2px 8px;
-        height: 21px;
-        white-space : nowrap;
-        
-    }
-    @media all and (max-width: 599px) {
-      &__tag {
-        font-size: $font-size-10;
-        height: 14px;
-        min-width: 68px;
-      }  
-    }
+.tag {
+  display: block;
+  font-size: $font-size-14;
+  font-weight: $font-weight-bold;
+  color: $text-light-color;
+  min-width: 99px;
+  background-color: $main-color;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 6.5px;
+  text-align: center;
+  padding: 2px 8px;
+  height: 21px;
+  white-space: nowrap;
+  @media all and (max-width: 599px) {
+    font-size: $font-size-10;
+    height: 14px;
+    min-width: 68px;
+  }
 }

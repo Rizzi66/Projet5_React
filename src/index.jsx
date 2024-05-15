@@ -7,19 +7,22 @@ import About from './pages/About'
 import Accommodation from './pages/Accommodation'
 import Error from './pages/Error'
 import Footer from './components/Footer'
-import './index.scss'
+import './styles/index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
-      <div className='size-container'>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/accommodation/:idAccommodation" element={<Accommodation />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <div className="size-container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/accommodation/:idAccommodation"
+            element={<Accommodation />}
+          />
+          <Route path="*" element={<Error />} />
+        </Routes>
       </div>
       <Footer />
     </Router>

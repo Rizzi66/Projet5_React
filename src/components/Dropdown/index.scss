@@ -1,11 +1,4 @@
-@import '../../variables.scss';
-@mixin absolute {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 56px;
-    bottom: 0px;
-}
+@import '../../styles/variables.scss';
 
 $height-menu: 52px;
 $height-menu-min: 30px;
@@ -18,93 +11,88 @@ $padding-menu-right-min: 10px;
 $padding-menu-left: 15px;
 $padding-menu-left-min: 10px;
 
-
-
-
 .dropdown {
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 30px;
-    width: 100%;
-    min-height: $height-menu;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+  min-height: $height-menu;
+  &__menu {
+    background-color: $main-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $height-menu;
+    padding: 0 $padding-menu-right 0 $padding-menu-left;
+    border-radius: 5px;
+    position: absolute;
+    width: calc(100% - $padding-menu-right - $padding-menu-left);
+    z-index: 2;
+    .dropdown__title {
+      font-size: $font-size-24;
+      font-weight: $font-weight-bold;
+      color: $text-light-color;
+      margin: 0;
+    }
+    .dropdown__button {
+      background-color: $main-color;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(0deg) scale(1);
+      transition: transform 300ms;
+      &--open {
+        transform: rotate(-180deg) scale(1);
+      }
+    }
+  }
+  &__content {
+    max-height: 0px;
+    background-color: darken($background-color, 3.5%);
+    padding: $padding-content;
+    font-size: $font-size-18;
+    border-radius: 0 0 5px 5px;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all 400ms;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: $height-menu;
+    }
+    &--open {
+      transform: translateY(0);
+      opacity: 1;
+      max-height: 500px;
+    }
+  }
+  @media all and (max-width: 599px) {
+    min-height: $height-menu-min;
+    margin-bottom: 20px;
     &__menu {
-        background-color: $main-color;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: $height-menu;
-        padding: 0 $padding-menu-right 0 $padding-menu-left;
-        border-radius: 5px;
-        position: absolute;
-        width: calc(100% - $padding-menu-right - $padding-menu-left);
-        z-index: 2;
-        .dropdown__title {
-            font-size: $font-size-24;
-            font-weight: $font-weight-bold;
-            color: $text-light-color;
-            margin: 0;
+      height: $height-menu-min;
+      padding: 0 0 0 $padding-menu-left-min;
+      width: calc(100% - $padding-menu-left-min);
+      .dropdown__title {
+        font-size: $font-size-13 !important;
+      }
+      .dropdown__button {
+        height: 24px;
+        width: 24px;
+        transform: rotate(0deg) scale(0.65);
+        &--open {
+          transform: rotate(-180deg) scale(0.65);
         }
-        .dropdown__button {
-            background-color: $main-color;
-            height: 32px;
-            width: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: rotate(0deg) scale(1);
-            transition: transform 300ms;
-            &--open {
-                transform: rotate(-180deg) scale(1);
-            }
-        }        
+      }
     }
     &__content {
-        max-height: 0px;
-        background-color: darken($background-color, 3.5%);
-        padding: $padding-content;
-        font-size: $font-size-18;
-        font-weight: $font-weight-light;
-        border-radius: 0 0 5px 5px;
-        transform: translateY(-200%);
-        opacity: 0;
-        transition: all 400ms ;
-        &::before {
-            content: "";
-            display: block;
-            padding-top: $height-menu;
-        }
-        &--open {
-            transform: translateY(0);
-            opacity: 1;
-            max-height: 500px;
-        }
+      font-size: $font-size-12;
+      padding: $padding-content-min;
+      &::before {
+        padding-top: $height-menu-min;
+      }
     }
-    @media all and (max-width: 599px) {
-        min-height: $height-menu-min;
-        margin-bottom: 20px;
-        &__menu {
-            height: $height-menu-min;
-            padding: 0 0 0 $padding-menu-left-min;
-            width: calc(100% - $padding-menu-left-min);
-            .dropdown__title {
-                font-size: $font-size-13!important;
-            }
-            .dropdown__button {
-                height: 24px;
-                width: 24px;
-                transform: rotate(0deg) scale(0.65);
-                &--open {
-                    transform: rotate(-180deg) scale(0.65);
-                }
-
-            }
-        }
-        &__content {
-            font-size: $font-size-12;
-            padding: $padding-content-min;
-            &::before {
-                padding-top: $height-menu-min;
-            }
-        }
-    }
+  }
 }

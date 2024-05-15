@@ -1,9 +1,9 @@
-import star from '../../assets/star.svg'
+import starPicture from '../../assets/star.svg'
 import './index.scss'
 
-function Rate( {current} ) {  
+function Rate({ rating }) {
   const maxStar = 5
-  const numberOfStar = parseInt(current.rating)
+  const numberOfStar = parseInt(rating)
   const remainingStar = maxStar - numberOfStar
 
   const arrayStar = []
@@ -15,14 +15,24 @@ function Rate( {current} ) {
   }
 
   return (
-    <div className='rate'>
-      {arrayStar.map((element, index) => (
-        element 
-        ?
-          <img key={index} className='rate__star rate__star--color' src={star} />
-        :
-          <img key={index} className='rate__star' src={star} />
-      ))}
+    <div className="rate">
+      {arrayStar.map((star, index) =>
+        star ? (
+          <img
+            key={index}
+            className="rate__star rate__star--color"
+            src={starPicture}
+            alt="étoile vide"
+          />
+        ) : (
+          <img
+            key={index}
+            className="rate__star"
+            src={starPicture}
+            alt="étoile pleine"
+          />
+        ),
+      )}
     </div>
   )
 }

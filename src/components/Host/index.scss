@@ -1,32 +1,31 @@
-@import '../../variables.scss';
+@import '../../styles/variables.scss';
 
 .host {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 64px;
+  &__name {
+    font-size: $font-size-18;
+    font-weight: $font-weight-normal;
+    color: $main-color;
+    text-align: end;
+    word-spacing: 400px;
+  }
+  &__pict {
     height: 64px;
+    width: 64px;
+    border-radius: 32px;
+    margin-left: 10px;
+  }
+  @media all and (max-width: 599px) {
+    height: 32px;
     &__name {
-        font-size: $font-size-18;
-        font-weight: $font-weight-normal;
-        color: $main-color;
-        margin: 0;
-        text-align: end;
-        word-spacing: 400px;
+      font-size: $font-size-12;
     }
     &__pict {
-        height: 64px;
-        width: 64px;
-        border-radius: 32px;
-        margin-left: 10px;
+      height: 32px;
+      width: 32px;
     }
-    @media all and (max-width: 599px) {
-        height: 32px;
-        &__name {
-            font-size: $font-size-12;
-        }  
-        &__pict {
-            height: 32px;
-            width: 32px;
-        }
-      }
+  }
 }
