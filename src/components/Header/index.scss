@@ -15,6 +15,9 @@
   &__link {
     font-size: $font-size-24;
     margin-left: 60px;
+    &:first-child {
+      margin-left: 0;
+    }
   }
   &__nav a.active {
     text-decoration: underline;
@@ -28,7 +31,7 @@
       margin-left: 26px;
     }
   }
-  @media all and (max-width: 359px) {
+  @media all and (max-width: 369px) {
     height: 30px;
   }
 }
